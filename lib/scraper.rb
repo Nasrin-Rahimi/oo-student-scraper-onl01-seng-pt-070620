@@ -17,9 +17,7 @@ class Scraper
       profile_path = student.css("a").attribute("href").value
       student_hash[:profile_url] = './fixtures/student-site/' + profile_path
       students_array << student_hash
-     binding.pry
      end
-    
   end
 
   def self.scrape_profile_page(profile_url)
