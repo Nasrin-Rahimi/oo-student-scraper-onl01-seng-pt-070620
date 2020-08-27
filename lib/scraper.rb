@@ -14,13 +14,10 @@ class Scraper
       student_hash = {}
       student_hash[:name] = student.css("h4.student-name").text
       student_hash[:location] = student.css("p.student-location").text
-      # profile_path = student.css("a").attribute("href").value
-      # student_hash[:profile_url] = './fixtures/student-site/' + profile_path
       student_hash[:profile_url] = student.css("a").attribute("href").value
       students_array << student_hash
      end
      students_array
-    # binding.pry
   end
 
   def self.scrape_profile_page(profile_url)
