@@ -11,6 +11,8 @@ class Scraper
     students = doc.css("div.student-card")
     student_array = []
     students.each do |student|
+      student_hash = {}
+      
      
     #   student_index_array <<  student.css(".student-name").text
      binding.pry
